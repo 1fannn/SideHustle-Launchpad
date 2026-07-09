@@ -1,225 +1,404 @@
-[7/6/2026 6:18 PM] Shutong Wu: <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
+<!DOCTYPE html><html class="scroll-smooth" lang="en" style=""><head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>SideHustle Launchpad | Turn Skills Into Income</title>
-
-<script src="https://cdn.tailwindcss.com"></script>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-<script>
-tailwind.config = {
-  theme: {
-    extend: {
-      colors: {
-        primary: "#006496",
-        background: "#f4faff",
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-dim": "#aee1fc",
+                    "surface-container-low": "#e7f6ff",
+                    "on-surface-variant": "#3e4851",
+                    "primary-fixed": "#cce5ff",
+                    "surface-bright": "#f4faff",
+                    "inverse-primary": "#91cdff",
+                    "tertiary-container": "#ee8b03",
+                    "surface-variant": "#bfe8ff",
+                    "on-background": "#001f2b",
+                    "surface-container": "#daf1ff",
+                    "on-primary-fixed": "#001e31",
+                    "tertiary-fixed": "#ffdcbf",
+                    "on-tertiary-container": "#573000",
+                    "surface-tint": "#006496",
+                    "on-secondary-fixed": "#131f00",
+                    "secondary-fixed-dim": "#a3d73e",
+                    "on-error-container": "#93000a",
+                    "error-container": "#ffdad6",
+                    "tertiary": "#8c5000",
+                    "tertiary-fixed-dim": "#ffb874",
+                    "on-secondary-container": "#4c6c00",
+                    "on-primary-container": "#003d5e",
+                    "secondary-fixed": "#bef459",
+                    "on-secondary": "#ffffff",
+                    "secondary": "#496800",
+                    "primary": "#006496",
+                    "surface": "#f4faff",
+                    "outline": "#6e7883",
+                    "surface-container-highest": "#bfe8ff",
+                    "surface-container-high": "#cdedff",
+                    "on-primary-fixed-variant": "#004b72",
+                    "inverse-surface": "#003547",
+                    "surface-container-lowest": "#ffffff",
+                    "error": "#ba1a1a",
+                    "on-tertiary-fixed-variant": "#6a3b00",
+                    "on-tertiary-fixed": "#2d1600",
+                    "inverse-on-surface": "#e1f3ff",
+                    "outline-variant": "#bec8d3",
+                    "on-tertiary": "#ffffff",
+                    "on-surface": "#001f2b",
+                    "secondary-container": "#bbf156",
+                    "primary-container": "#00acff",
+                    "on-error": "#ffffff",
+                    "on-secondary-fixed-variant": "#364e00",
+                    "background": "#f4faff",
+                    "primary-fixed-dim": "#91cdff",
+                    "on-primary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "margin-mobile": "20px",
+                    "container-max": "1280px",
+                    "margin-desktop": "40px",
+                    "unit": "8px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Inter"],
+                    "label-md": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "headline-lg-mobile": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "label-sm": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}]
+            }
+          },
+        },
       }
-    }
-  }
-}
-</script>
-
+    </script>
 <style>
-body { font-family: Inter, sans-serif; }
-</style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at 50% 50%, rgba(0, 172, 255, 0.05) 0%, transparent 70%);
+        }
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px -4px rgba(0, 172, 255, 0.12);
+        }
+        .step-path {
+            background: linear-gradient(to bottom, #00acff 0%, #a3d73e 100%);
+        }
+    </style>
 </head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<header class="sticky top-0 w-full z-50 bg-surface-container-lowest/80 backdrop-blur-md border-b border-outline-variant/30 shadow-sm h-20">
+<nav class="flex justify-between items-center max-w-container-max mx-auto px-margin-desktop h-full">
 
-<body class="bg-background text-gray-900 overflow-x-hidden">
-
-<!-- ================= NAV ================= -->
-<header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b">
-
-  <div class="w-full max-w-screen-xl mx-auto px-5 py-4 flex justify-between items-center">
-
-    <!-- Logo -->
-    <div class="flex items-center gap-2">
-      < img src="https://i.imgur.com/3x35nZK.png" class="h-10 w-10 object-contain">
-      <span class="font-bold text-lg">SideHustle Launchpad</span>
-    </div>
-
-    <!-- Desktop Nav -->
-    <nav class="hidden md:flex gap-8 text-sm text-gray-600">
-      <a href=" " class="hover:text-primary">Features</a >
-      <a href="#" class="hover:text-primary">Demo</a >
-      <a href="#" class="hover:text-primary">Pricing</a >
-      <a href="#" class="hover:text-primary">About</a >
-    </nav>
-
-    <!-- Actions -->
-    <div class="flex items-center gap-3">
-
-      <button class="hidden sm:block text-sm text-gray-600">
-        Login
-      </button>
-
-      <button class="bg-primary text-white px-4 py-2 rounded-full text-sm">
-        Get Started
-      </button>
-
-      <button id="menuBtn" class="md:hidden text-2xl">
-        ☰
-      </button>
-
-    </div>
-
+  <!-- Logo -->
+  <div class="flex items-center gap-2">
+    <img alt="Logo" class="h-20 w-20 object-contain" src="https://i.imgur.com/3x35nZK.png">
+    <span class="text-headline-md font-bold text-on-surface">SideHustle Launchpad</span>
   </div>
 
-  <!-- Mobile Menu -->
-  <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+  <!-- Desktop Nav -->
+  <ul class="hidden md:flex gap-8 items-center">
+    <li><a class="text-primary border-b-2 border-primary pb-1 font-label-md" href="#">Features</a></li>
+    <li><a class="text-on-surface-variant hover:text-primary font-label-md" href="#">Demo</a></li>
+    <li><a class="text-on-surface-variant hover:text-primary font-label-md" href="#">Pricing</a></li>
+    <li><a class="text-on-surface-variant hover:text-primary font-label-md" href="#">About</a></li>
+    <li><a class="text-on-surface-variant hover:text-primary font-label-md" href="#">FAQ</a></li>
+  </ul>
 
-    <div class="px-5 py-4 flex flex-col gap-4 text-sm">
-      <a href="#">Features</a >
-      <a href="#">Demo</a >
-      <a href="#">Pricing</a >
-      <a href="#">About</a >
-      <hr>
-      <button class="text-left">Login</button>
-      <button class="bg-primary text-white py-2 rounded-lg">
-        Get Started
-      </button>
-    </div>
+  <!-- Right Actions -->
+  <div class="flex items-center gap-4">
+
+    <button class="hidden sm:block text-on-surface-variant font-label-md hover:text-primary">
+      Login
+    </button>
+
+    <button class="bg-primary text-white px-6 py-2 rounded-full font-label-md">
+      Get Started
+    </button>
+
+    <!-- Hamburger (Mobile only) -->
+    <button id="menuBtn" class="md:hidden flex items-center">
+      <span class="material-symbols-outlined text-3xl">menu</span>
+    </button>
 
   </div>
+</nav>
 
+<!-- Mobile Menu -->
+<div id="mobileMenu"
+     class="md:hidden hidden absolute top-20 left-0 w-full bg-white shadow-lg border-t border-outline-variant/30">
+
+  <div class="flex flex-col p-6 gap-4">
+
+    <a href="#" class="font-label-md text-on-surface-variant">Features</a>
+    <a href="#" class="font-label-md text-on-surface-variant">Demo</a>
+    <a href="#" class="font-label-md text-on-surface-variant">Pricing</a>
+    <a href="#" class="font-label-md text-on-surface-variant">About</a>
+    <a href="#" class="font-label-md text-on-surface-variant">FAQ</a>
+
+    <hr class="my-2">
+
+    <button class="text-left font-label-md text-on-surface-variant">Login</button>
+    <button class="bg-primary text-white py-3 rounded-xl font-label-md">
+      Get Started
+    </button>
+
+  </div>
+</div>
 </header>
 
-<script>
-document.getElementById("menuBtn").onclick = function () {
-  document.getElementById("mobileMenu").classList.toggle("hidden");
-};
-</script>
-
-<!-- ================= HERO ================= -->
-<section class="py-16 md:py-24">
-
-  <div class="w-full max-w-screen-xl mx-auto px-5 md:px-10">
-
-    <div class="flex flex-col md:grid md:grid-cols-2 gap-10 items-center">
-
-      <!-- Text -->
-      <div class="space-y-6">
-
-        <div class="inline-flex px-3 py-1 bg-blue-50 text-primary rounded-full text-xs">
-          🚀 Join Student Entrepreneurs
-        </div>
-
-        <h1 class="text-3xl md:text-5xl font-bold leading-tight">
-          Turn Your Skills Into <span class="text-primary">Income</span>
-        </h1>
-
-        <p class="text-gray-600">
-          AI-powered platform for student entrepreneurs to launch and grow side hustles.
-        </p >
-
-        <div class="flex flex-col sm:flex-row gap-3">
-          <button class="bg-orange-500 text-white px-6 py-3 rounded-xl">
-            Start Free
-          </button>
-          <button class="border px-6 py-3 rounded-xl">
-            Watch Video
-          </button>
-        </div>
-
-      </div>
-
-      <!-- Image -->
-      <div>
-        <img
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUhTdxkDf47GQJeZm5aj4eQXTX5KRRCUdPev7pyN5bP9SUNmENsCOdMXcjrTWtwPzqRQw0o4EFldgT14qFw3z8CGADraZP6CiWPJVGtYlrDgbbAdmFcLrdmKEOUAdE1OSbeLlA0Zd7vViavluxGzRmV2m9WwLtxE_iZsXHhWPT4mZ5p1BJOpp-pM4wPYZDLTOqwHHoa7oImC-h8ex-1y7D1ppaDLGeqF8vTLi-wgrb_mTf4Zf2df4L"
-          class="w-full rounded-xl shadow-lg"
-        >
-      </div>
-
-    </div>
-
-  </div>
-
+<main>
+<!-- Hero Section -->
+<section class="relative pt-16 pb-24 px-margin-mobile md:px-margin-desktop hero-gradient overflow-hidden">
+<div class="max-w-container-max mx-auto grid md:grid-cols-2 gap-16 items-center">
+<div class="space-y-8">
+<div class="inline-flex items-center gap-2 px-4 py-2 bg-secondary-container/30 text-secondary font-label-sm rounded-full">
+<span class="material-symbols-outlined text-[18px]">rocket_launch</span>
+                        Join Our Student Entrepreneurs
+                    </div>
+<h1 class="font-display-lg text-display-lg text-on-background leading-tight">
+                        Turn Your Skills Into <span class="text-primary">Income</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                        The AI-powered platform for student entrepreneurs to launch, grow, and scale their side hustles. From idea to first dollar, we've got you covered.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-[#ed6730] hover:bg-[#d45625] text-white px-8 py-4 rounded-xl font-label-md shadow-lg shadow-tertiary-container/20 transition-all flex items-center gap-2">
+                            Start Free
+                            <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="border-2 border-outline-variant hover:border-primary hover:text-primary px-8 py-4 rounded-xl font-label-md transition-all flex items-center gap-2">
+<span class="material-symbols-outlined">play_circle</span>
+                            Watch Video</button>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -inset-4 bg-primary-container/10 blur-3xl rounded-full"></div>
+<img alt="Student collaborating with AI" class="relative z-10 w-full h-auto drop-shadow-2xl rounded-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUhTdxkDf47GQJeZm5aj4eQXTX5KRRCUdPev7pyN5bP9SUNmENsCOdMXcjrTWtwPzqRQw0o4EFldgT14qFw3z8CGADraZP6CiWPJVGtYlrDgbbAdmFcLrdmKEOUAdE1OSbeLlA0Zd7vViavluxGzRmV2m9WwLtxE_iZsXHhWPT4mZ5p1BJOpp-pM4wPYZDLTOqwHHoa7oImC-h8ex-1y7D1ppaDLGeqF8vTLi-wgrb_mTf4Zf2df4L">
+</div>
+</div>
 </section>
-
-<!-- ================= FEATURES ================= -->
-<section class="py-16 md:py-24 bg-white">
-
-  <div class="w-full max-w-screen-xl mx-auto px-5 md:px-10">
-
-    <div class="text-center mb-10">
-[7/6/2026 6:18 PM] Shutong Wu: <h2 class="text-2xl md:text-4xl font-bold">Launch Faster with AI</h2>
-      <p class="text-gray-500 mt-2">Everything you need to build your first business</p >
-    </div>
-
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-      <div class="p-6 border rounded-xl">
-        <h3 class="font-semibold mb-2">Idea Generator</h3>
-        <p class="text-gray-500 text-sm">AI finds business ideas for your skills.</p >
-      </div>
-
-      <div class="p-6 border rounded-xl">
-        <h3 class="font-semibold mb-2">Brand Builder</h3>
-        <p class="text-gray-500 text-sm">Create logos and branding instantly.</p >
-      </div>
-
-      <div class="p-6 border rounded-xl">
-        <h3 class="font-semibold mb-2">Marketing Copy</h3>
-        <p class="text-gray-500 text-sm">Write ads that convert customers.</p >
-      </div>
-
-      <div class="p-6 border rounded-xl">
-        <h3 class="font-semibold mb-2">Pricing Tool</h3>
-        <p class="text-gray-500 text-sm">Optimize pricing for profit.</p >
-      </div>
-
-      <div class="p-6 border rounded-xl">
-        <h3 class="font-semibold mb-2">Content Planner</h3>
-        <p class="text-gray-500 text-sm">Plan your social media growth.</p >
-      </div>
-
-      <div class="p-6 border rounded-xl">
-        <h3 class="font-semibold mb-2">Business Blueprint</h3>
-        <p class="text-gray-500 text-sm">Step-by-step startup roadmap.</p >
-      </div>
-
-    </div>
-
-  </div>
-
+<!-- Features Grid -->
+<section class="py-24 bg-surface-container-lowest px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg mb-4 text-on-background">Launch Faster with AI</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Everything you need to move from "Maybe" to "Launched".</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<div class="feature-card bg-white p-8 rounded-xl border border-outline-variant/30 transition-all">
+<div class="w-12 h-12 bg-primary-container/20 text-primary rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined">psychology</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2">Business Idea Generator</h3>
+<p class="text-on-surface-variant font-body-md">AI-powered brainstorming tailored to your specific skills, major, and available free time.</p>
+</div>
+<!-- Card 2 -->
+<div class="feature-card bg-white p-8 rounded-xl border border-outline-variant/30 transition-all">
+<div class="w-12 h-12 bg-secondary-container/20 text-secondary rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined">palette</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2">Branding Assistant</h3>
+<p class="text-on-surface-variant font-body-md">Get a professional visual identity with logos, palettes, and typography in seconds.</p>
+</div>
+<!-- Card 3 -->
+<div class="feature-card bg-white p-8 rounded-xl border border-outline-variant/30 transition-all">
+<div class="w-12 h-12 bg-tertiary-container/20 text-tertiary rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined">auto_fix_high</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2">Marketing Copy</h3>
+<p class="text-on-surface-variant font-body-md">Generate high-converting ads, landing page text, and social posts that actually sell.</p>
+</div>
+<!-- Card 4 -->
+<div class="feature-card bg-white p-8 rounded-xl border border-outline-variant/30 transition-all">
+<div class="w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined">calculate</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2">Pricing Strategy</h3>
+<p class="text-on-surface-variant font-body-md">Professional margin calculations to ensure you're pricing for profit from day one.</p>
+</div>
+<!-- Card 5 -->
+<div class="feature-card bg-white p-8 rounded-xl border border-outline-variant/30 transition-all">
+<div class="w-12 h-12 bg-secondary/10 text-secondary rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined">calendar_month</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2">Content Calendar</h3>
+<p class="text-on-surface-variant font-body-md">Plan your social growth with AI-suggested topics and optimal posting schedules.</p>
+</div>
+<!-- Card 6 -->
+<div class="feature-card bg-white p-8 rounded-xl border border-outline-variant/30 transition-all">
+<div class="w-12 h-12 bg-tertiary/10 text-tertiary rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined">map</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2">Business Blueprint</h3>
+<p class="text-on-surface-variant font-body-md">A dynamic step-by-step roadmap that adapts to your progress and goals.</p>
+</div>
+</div>
+</div>
 </section>
-
-<!-- ================= CTA ================= -->
-<section class="py-16 md:py-24">
-
-  <div class="w-full max-w-screen-xl mx-auto px-5 md:px-10">
-
-    <div class="bg-blue-100 p-10 rounded-xl text-center">
-
-      <h2 class="text-2xl md:text-4xl font-bold mb-4">
-        Ready to start your hustle?
-      </h2>
-
-      <p class="text-gray-600 mb-6">
-        Join thousands of students building real businesses.
-      </p >
-
-      <button class="bg-white text-primary px-6 py-3 rounded-xl font-semibold">
-        Get Started Now
-      </button>
-
-    </div>
-
-  </div>
-
+<!-- How It Works Timeline -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop overflow-hidden">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-20">
+<h2 class="font-headline-lg text-headline-lg mb-4">Your Venture Path</h2>
+<p class="font-body-md text-on-surface-variant">The structured journey from student to CEO.</p>
+</div>
+<div class="relative flex flex-col md:flex-row justify-between gap-12 md:gap-0">
+<!-- Decorative Line -->
+<div class="hidden md:block absolute top-12 left-0 w-full h-[2px] step-path z-0 opacity-20"></div>
+<!-- Step 1 -->
+<div class="relative z-10 flex flex-col items-center text-center md:w-1/4 px-4">
+<div class="w-24 h-24 rounded-full bg-primary flex items-center justify-center text-white font-headline-md mb-6 border-8 border-background">1</div>
+<h4 class="font-headline-md mb-2">Identify Skills</h4>
+<p class="text-on-surface-variant text-sm px-4">Map your academic knowledge and hobbies to market needs.</p>
+</div>
+<!-- Step 2 -->
+<div class="relative z-10 flex flex-col items-center text-center md:w-1/4 px-4">
+<div class="w-24 h-24 rounded-full bg-primary flex items-center justify-center text-white font-headline-md mb-6 border-8 border-background">2</div>
+<h4 class="font-headline-md mb-2">AI Generation</h4>
+<p class="text-on-surface-variant text-sm px-4">Use our tools to build your brand and copy in minutes.</p>
+</div>
+<!-- Step 3 -->
+<div class="relative z-10 flex flex-col items-center text-center md:w-1/4 px-4">
+<div class="w-24 h-24 rounded-full bg-primary flex items-center justify-center text-white font-headline-md mb-6 border-8 border-background">3</div>
+<h4 class="font-headline-md mb-2">Launch &amp; Test</h4>
+<p class="text-on-surface-variant text-sm px-4">Get your first customers and validate your business model.</p>
+</div>
+<!-- Step 4 -->
+<div class="relative z-10 flex flex-col items-center text-center md:w-1/4 px-4">
+<div class="w-24 h-24 rounded-full bg-secondary flex items-center justify-center text-white font-headline-md mb-6 border-8 border-background">
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">stars</span>
+</div>
+<h4 class="font-headline-md mb-2">Scale Profit</h4>
+<p class="text-on-surface-variant text-sm px-4">Optimize your margins and grow your customer base.</p>
+</div>
+</div>
+</div>
 </section>
-
-<!-- ================= FOOTER ================= -->
-<footer class="border-t py-10">
-
-  <div class="w-full max-w-screen-xl mx-auto px-5 md:px-10 text-sm text-gray-500">
-    © 2026 SideHustle Launchpad. All rights reserved.
-  </div>
-
+<!-- Testimonials -->
+<section class="py-24 bg-surface-container-low px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto">
+<h2 class="font-headline-lg text-headline-lg mb-12 text-center">Built by Students, for Students</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="bg-white p-8 rounded-xl shadow-sm border border-outline-variant/20">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-surface-dim">
+<img class="w-full h-full object-cover" data-alt="Close-up portrait of a 20-year-old female university student with short hair, smiling confidently in a modern, brightly lit coworking space. The background is softly blurred, showing other students working with laptops. Clean, high-tech, light-mode aesthetic with soft blue accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyi0R1vGChffJAoGze2R3gFV1hekHTfeZYglsx9VpOGX2MjinECAQczZeTCS2LGJT0wYfdmt0gnlgMyTDEys3AuSuUvNFHebusdY41_0hX4aGSOkY3Z4NWf5v3E1ktaBwk4rs5tScDHDHB2d60xeFPjlE-pyozeKjdUUOI7LOOjaYzMKGzEQmR9OHwcoTRuc5xBlfAfCemrgiHMJJDq66yFfphHsA_nJvp7fBytmjG5BwDusgkHLj4">
+</div>
+<div>
+<p class="font-label-md text-on-background">Sarah Chen</p>
+<p class="text-on-surface-variant text-xs">Graphic Design Student</p>
+</div>
+</div>
+<p class="font-body-md italic text-on-surface-variant">"Launchpad turned my design hobby into a $2k/month agency while I'm still in my second year. The AI brand tools are insane!"</p>
+</div>
+<div class="bg-white p-8 rounded-xl shadow-sm border border-outline-variant/20">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-surface-dim">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a young male entrepreneur in a casual hoodie, sitting in a vibrant campus environment. He has a warm, approachable smile. The lighting is natural and bright, matching a professional SaaS commercial aesthetic with primary blue highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOkqZD1SJqxI4AdCIfP_cnJ_9obYhD0Ax5Fnw2QBd3lVk-zPchznuDNO-wfG5lItUCS9KGQMmf8qIP42_qfIrXvUR1aKBskBwiSPgBuptc5AcUCPSOZ2Qz9DPfsdvTAn7DOseLof3KrNuRHEd8c1NQ-SIPT06XA6vxvUG9g6pGpSiNbOq8-0SwfM2m0NsnyMQNG1Mm8bNZcdiBEPf9VAya0ZzfHbhwk7Paz0lCtomU4MgYLWW76b75">
+</div>
+<div>
+<p class="font-label-md text-on-background">Marcus Thorne</p>
+<p class="text-on-surface-variant text-xs">Business Analytics Major</p>
+</div>
+</div>
+<p class="font-body-md italic text-on-surface-variant">"The Business Blueprint saved me months of trial and error. I knew exactly what step to take next without feeling overwhelmed."</p>
+</div>
+<div class="bg-white p-8 rounded-xl shadow-sm border border-outline-variant/20">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-surface-dim">
+<img class="w-full h-full object-cover" data-alt="Portrait of a young diverse female student with glasses, looking inspired while working on a laptop at a sleek cafe table. Soft morning sunlight filters through the window, creating a hopeful and empowering atmosphere. Clean minimalist style with green and blue tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCspZEGuJO2rzIqS50Z3hETlAjIoaqa-8xbM-DAv2hGk9FAzL3Dis6XPn3O5L_sDlEDNZ1rzzart5PYW5kIigDqDQcZvmdPlPmnBpUV0OpxfrxV-vm9rVf2BsByWteD-qegj8i_85hsAX_RgDJq0aWD2rklJD85RM5wGIKTAAWlPT0-BlorhXON-YQnIxx0F-aIb2j-qmIQFWbmriOGVhNZW8EHKEWZSZSH79t51_OkWbD6QXNjqoVg">
+</div>
+<div>
+<p class="font-label-md text-on-background">Aisha Patel</p>
+<p class="text-on-surface-variant text-xs">Computer Science Senior</p>
+</div>
+</div>
+<p class="font-body-md italic text-on-surface-variant">"I launched my tutoring business in 48 hours. The marketing generator wrote better ads than I ever could. Highly recommend!"</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Banner -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto bg-primary-container text-on-primary-container rounded-xl p-12 md:p-20 text-center relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+<div class="absolute bottom-0 left-0 w-48 h-48 bg-secondary-container/10 rounded-full blur-2xl translate-y-1/2 -translate-x-1/2"></div>
+<h2 class="font-display-lg text-display-lg mb-6 relative z-10">Ready to launch your hustle?</h2>
+<p class="font-body-lg mb-10 max-w-2xl mx-auto relative z-10 text-on-primary-container/90">Join thousands of students who are building their future today. No credit card required to start.</p>
+<button class="bg-white text-primary hover:bg-surface-bright px-10 py-5 rounded-xl font-headline-md shadow-xl transition-all active:scale-95 relative z-10">
+                    Get Started Now
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low w-full rounded-t-lg mt-12">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto px-margin-desktop py-16">
+<div class="space-y-4">
+<div class="text-headline-md font-headline-md font-bold text-on-surface">SideHustle Launchpad</div>
+<p class="text-on-surface-variant font-body-md">Empowering the next generation of entrepreneurs with AI-driven tools.</p>
+</div>
+<div>
+<h4 class="font-label-md text-primary mb-6 uppercase tracking-wider">Product</h4>
+<ul class="space-y-4">
+<li class=""><a class="text-on-surface-variant hover:text-primary transition-all font-label-md" href="#">Features</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-primary transition-all font-label-md" href="#">Demo</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-primary transition-all font-label-md" href="#">Pricing</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-primary transition-all font-label-md" href="#">Blog</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-primary mb-6 uppercase tracking-wider">Support</h4>
+<ul class="space-y-4">
+<li class=""><a class="text-on-surface-variant hover:text-primary transition-all font-label-md" href="#">FAQ</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-primary transition-all font-label-md" href="#">Contact</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-primary transition-all font-label-md" href="#">Careers</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-primary transition-all font-label-md" href="#">Support</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-primary mb-6 uppercase tracking-wider">Legal</h4>
+<ul class="space-y-4">
+<li class=""><a class="text-on-surface-variant hover:text-primary transition-all font-label-md" href="#">Privacy Policy</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-primary transition-all font-label-md" href="#">Terms of Service</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-primary transition-all font-label-md" href="#">Cookie Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop py-8 border-t border-outline-variant/30 text-center">
+<p class="font-label-sm text-on-surface-variant">© 2024 SideHustle Launchpad. All rights reserved.</p>
+</div>
 </footer>
 
-</body>
-</html>
+
+</body></html>
